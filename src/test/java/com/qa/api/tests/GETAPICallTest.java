@@ -8,7 +8,6 @@ import com.microsoft.playwright.APIResponse;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.RequestOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -16,7 +15,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Map;
 
-public class GETAPICall {
+public class GETAPICallTest {
     Playwright playwright;
     APIRequest apiRequest;
     APIRequestContext apiRequestContext;

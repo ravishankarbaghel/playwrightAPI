@@ -6,7 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ValdateDispose {
+public class ValdateDisposeTest {
     Playwright playwright;
     APIRequestContext apiRequestContext;
     APIRequest apiRequest;
