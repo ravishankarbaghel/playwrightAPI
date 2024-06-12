@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class TokenGenerateTest {
+public class TokenGenerateTest extends TestBase{
 
     /**
      * Here we will be generating a token before making an delete, put call

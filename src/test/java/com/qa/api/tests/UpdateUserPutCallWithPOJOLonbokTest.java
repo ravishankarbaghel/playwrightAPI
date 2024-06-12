@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-public class UpdateUserPutCallWithPOJOLonbokTest {
+public class UpdateUserPutCallWithPOJOLonbokTest extends TestBase{
 
     /**
      * Flow of Test
