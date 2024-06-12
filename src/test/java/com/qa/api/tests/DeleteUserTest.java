@@ -23,10 +23,12 @@ public class DeleteUserTest {
     APIRequestContext apiRequestContext;
     static String email;
     static UserData userData = UserData.builder().name("New User").email(genrateEmailAddress()).gender("Male").status("active").build();
+
     public static String genrateEmailAddress() {
         email = "TestUser" + System.currentTimeMillis() + "@testmail.com";
         return email;
     }
+
     @BeforeTest
     public void SetUp() {
         playwright = Playwright.create();
@@ -38,11 +40,13 @@ public class DeleteUserTest {
     public void tearDown() {
         playwright.close();
     }
-static String ID;
+
+    static String ID;
+
     @Test(priority = 1)
     public void postCall() throws JsonProcessingException {
 
-
+//please generate your token API URL : https://gorest.co.in/public/v2/users
         APIResponse postResponse = apiRequestContext.post("https://gorest.co.in/public/v2/users", RequestOptions.create()
                 .setHeader("content-type", "application/json")
                 .setHeader("Authorization", "Bearer ec0a08ec6879f19e412d690df7f819a83217304a3f3952137452000e3d9b9595")
@@ -58,16 +62,17 @@ static String ID;
         logger.info("The ID is : " + ID);
         Assert.assertNotNull(actUserData.getId());
     }
+
     @Test(priority = 2)
     public void deleteCall() throws JsonProcessingException {
 
 
-        APIResponse postResponse = apiRequestContext.delete("https://gorest.co.in/public/v2/users/"+ID,
-                                                    RequestOptions.create()
-                                                    .setHeader("Authorization", "Bearer ec0a08ec6879f19e412d690df7f819a83217304a3f3952137452000e3d9b9595"));
+        APIResponse postResponse = apiRequestContext.delete("https://gorest.co.in/public/v2/users/" + ID,
+                RequestOptions.create()
+                        .setHeader("Authorization", "Bearer ec0a08ec6879f19e412d690df7f819a83217304a3f3952137452000e3d9b9595"));
 
         //Assertions
         Assert.assertEquals(postResponse.status(), 204);
-        Assert.assertEquals(postResponse.statusText(),"No Content");
+        Assert.assertEquals(postResponse.statusText(), "No Content");
     }
-    }
+}
