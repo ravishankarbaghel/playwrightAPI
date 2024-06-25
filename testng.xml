@@ -7,7 +7,7 @@
     <test name="Test">
         <classes>
             <class name="com.qa.api.tests.UpdateUserPutCallWithPOJOLonbokTest"/>
-            <class name="com.qa.api.tests.TokenGenerateTest"/>
+            <class name="com.qa.api.tests.TokenAuthorizationTest"/>
             <class name="com.qa.api.tests.GETAPICallTest"/>
             <class name="com.qa.api.tests.ValdateDisposeTest"/>
             <class name="com.qa.api.tests.PostCallTest"/>

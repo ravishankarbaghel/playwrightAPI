@@ -1,9 +1,7 @@
 package com.qa.api.tests;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.introspect.AnnotationCollector;
 import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.APIResponse;
@@ -18,11 +16,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
-public class TokenGenerateTest extends TestBase{
+public class TokenAuthorizationTest extends TestBase{
 
     /**
      * Here we will be generating a token before making an delete, put call
